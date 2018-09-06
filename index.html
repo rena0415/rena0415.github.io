@@ -98,7 +98,7 @@
 <div class="intrude-less">
     <header id="header" class="inner">
         <a href="/" class="profilepic">
-            <img src="/img/avatar.png" class="animated zoomIn">
+            <img src="/img/me.jpg" class="animated zoomIn">
         </a>
         <hgroup>
           <h1 class="header-author"><a href="/">Rena</a></h1>
@@ -160,6 +160,8 @@
                             <li><a href="/">主页</a></li>
                         
                             <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/随笔">随笔</a></li>
                         
                             <li><a href="/tags/">标签云</a></li>
                         
@@ -223,7 +225,7 @@
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
-                <img src="/img/avatar.png" class="animated zoomIn">
+                <img src="/img/me.jpg" class="animated zoomIn">
             </a>
             <hgroup>
               <h1 class="header-author"><a href="/" title="回到主页">Rena</a></h1>
@@ -235,6 +237,8 @@
                     <li><a href="/">主页</a></li>
                 
                     <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/随笔">随笔</a></li>
                 
                     <li><a href="/tags/">标签云</a></li>
                 
@@ -303,118 +307,6 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
     </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/09/06/hello/" class="article-date">
-      <time datetime="2018-09-06T14:10:01.988Z" itemprop="datePublished">2018-09-06</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="Struts2中dispatcher、chain、redirectAction等返回结果的区别"><a href="#Struts2中dispatcher、chain、redirectAction等返回结果的区别" class="headerlink" title="Struts2中dispatcher、chain、redirectAction等返回结果的区别"></a>Struts2中dispatcher、chain、redirectAction等返回结果的区别</h2><p>&emsp;&emsp;Action处理完用户请求后，返回一个普通字符串，整个普通字符串就是一个逻辑视图名。通过配置逻辑视图名和物理视图资源之间的映射关系，系统在收到Action返回的逻辑视图名后就会把响应的物理视图资源呈现给浏览者。</p>
-<p>&emsp;&emsp;对于返回结果，需要在struts.xml的<result ...="">元素中配置。result元素有两个任务：</result></p>
-<ul>
-<li>提供一个逻辑名，一个action返回类似”success”或”error”，而任何其他细节信息并不知道</li>
-<li>提供一个result type，默认为dispatcher，另外可选的结果有redirect、redirectaction、action。<blockquote>
-<ol>
-<li>跳转方式：dispatcher和chain是服务器端跳转，所以客户端只发起一次请求，产生一个action；redirect和redirectAction是客户端跳转，所以客户端发起两次请求。</li>
-<li>跳转内容:dispatcher和redirect跳转的是views（一般是jsp页面）；chain和redirectAction跳转的是一个action。</li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left"><strong>名称</strong></th>
-<th style="text-align:left"><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">dispatcher</td>
-<td style="text-align:left">将请求forward（转发）到指定JSP</td>
-</tr>
-<tr>
-<td style="text-align:left">chain</td>
-<td style="text-align:left">处理Action链</td>
-</tr>
-<tr>
-<td style="text-align:left">redirect</td>
-<td style="text-align:left">重定向至一个URL</td>
-</tr>
-<tr>
-<td style="text-align:left">redirectaction</td>
-<td style="text-align:left">重定向至一个Action</td>
-</tr>
-<tr>
-<td style="text-align:left">freeMarker</td>
-<td style="text-align:left">处理freeMarker模板</td>
-</tr>
-<tr>
-<td style="text-align:left">httpHeader</td>
-<td style="text-align:left">控制特殊的Http行为</td>
-</tr>
-<tr>
-<td style="text-align:left">steam</td>
-<td style="text-align:left">向浏览器发送InputStream对象，用来处理文件下载</td>
-</tr>
-<tr>
-<td style="text-align:left">velocity</td>
-<td style="text-align:left">处理Velocity模板</td>
-</tr>
-<tr>
-<td style="text-align:left">xslt</td>
-<td style="text-align:left">处理XML/XLST模板</td>
-</tr>
-<tr>
-<td style="text-align:left">plaintext</td>
-<td style="text-align:left">显示原始文件内容</td>
-</tr>
-<tr>
-<td style="text-align:left">tiles</td>
-<td style="text-align:left">结合Tile使用</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p><a href="https://blog.csdn.net/sosous/article/details/40950203" target="_blank" rel="noopener">https://blog.csdn.net/sosous/article/details/40950203</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
       
       <div class="clearfix"></div>
     </div>
