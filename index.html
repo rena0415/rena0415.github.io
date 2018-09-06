@@ -447,10 +447,21 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/06/strutsdispacther/">Struts2中dispatcher、chain、redirectAction等返回结果的区别</a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="Struts2中dispatcher、chain、redirectAction等返回结果的区别"><a href="#Struts2中dispatcher、chain、redirectAction等返回结果的区别" class="headerlink" title="Struts2中dispatcher、chain、redirectAction等返回结果的区别"></a>Struts2中dispatcher、chain、redirectAction等返回结果的区别</h2><p>&emsp;&emsp;Action处理完用户请求后，返回一个普通字符串，整个普通字符串就是一个逻辑视图名。通过配置逻辑视图名和物理视图资源之间的映射关系，系统在收到Action返回的逻辑视图名后就会把响应的物理视图资源呈现给浏览者。</p>
+        <p>&emsp;&emsp;Action处理完用户请求后，返回一个普通字符串，整个普通字符串就是一个逻辑视图名。通过配置逻辑视图名和物理视图资源之间的映射关系，系统在收到Action返回的逻辑视图名后就会把响应的物理视图资源呈现给浏览者。</p>
 <p>&emsp;&emsp;对于返回结果，需要在struts.xml的<result ...="">元素中配置。result元素有两个任务：</result></p>
 <ul>
 <li>提供一个逻辑名，一个action返回类似”success”或”error”，而任何其他细节信息并不知道</li>
