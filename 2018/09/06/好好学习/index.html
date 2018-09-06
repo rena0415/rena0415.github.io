@@ -15,17 +15,18 @@
 
 
 
-<meta name="description" content="Struts2中dispatcher、chain、redirectAction等返回结果的区别&amp;emsp;&amp;emsp;Action处理完用户请求后，返回一个普通字符串，整个普通字符串就是一个逻辑视图名。通过配置逻辑视图名和物理视图资源之间的映射关系，系统在收到Action返回的逻辑视图名后就会把响应的物理视图资源呈现给浏览者。 &amp;emsp;&amp;emsp;对于返回结果，需要在struts.xml的元素">
+<meta name="description" content="抓紧时间，把内功提升上去空有招式是不行的养成好的习惯">
+<meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Rena">
-<meta property="og:url" content="http://yoursite.com/2018/09/06/strutsdispacther/index.html">
+<meta property="og:title" content="真的要好好学习">
+<meta property="og:url" content="http://yoursite.com/2018/09/06/好好学习/index.html">
 <meta property="og:site_name" content="Rena">
-<meta property="og:description" content="Struts2中dispatcher、chain、redirectAction等返回结果的区别&amp;emsp;&amp;emsp;Action处理完用户请求后，返回一个普通字符串，整个普通字符串就是一个逻辑视图名。通过配置逻辑视图名和物理视图资源之间的映射关系，系统在收到Action返回的逻辑视图名后就会把响应的物理视图资源呈现给浏览者。 &amp;emsp;&amp;emsp;对于返回结果，需要在struts.xml的元素">
+<meta property="og:description" content="抓紧时间，把内功提升上去空有招式是不行的养成好的习惯">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-06T03:39:27.647Z">
+<meta property="og:updated_time" content="2018-09-06T14:23:15.417Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rena">
-<meta name="twitter:description" content="Struts2中dispatcher、chain、redirectAction等返回结果的区别&amp;emsp;&amp;emsp;Action处理完用户请求后，返回一个普通字符串，整个普通字符串就是一个逻辑视图名。通过配置逻辑视图名和物理视图资源之间的映射关系，系统在收到Action返回的逻辑视图名后就会把响应的物理视图资源呈现给浏览者。 &amp;emsp;&amp;emsp;对于返回结果，需要在struts.xml的元素">
+<meta name="twitter:title" content="真的要好好学习">
+<meta name="twitter:description" content="抓紧时间，把内功提升上去空有招式是不行的养成好的习惯">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Rena</title>
+<title>真的要好好学习 | Rena</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -257,11 +258,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-strutsdispacther" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-好好学习" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/09/06/strutsdispacther/" class="article-date">
-      <time datetime="2018-09-06T04:35:40.180Z" itemprop="datePublished">2018-09-06</time>
+      <a href="/2018/09/06/好好学习/" class="article-date">
+      <time datetime="2018-09-06T14:23:14.858Z" itemprop="datePublished">2018-09-06</time>
 </a>
 
 
@@ -272,77 +273,32 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      真的要好好学习
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="Struts2中dispatcher、chain、redirectAction等返回结果的区别"><a href="#Struts2中dispatcher、chain、redirectAction等返回结果的区别" class="headerlink" title="Struts2中dispatcher、chain、redirectAction等返回结果的区别"></a>Struts2中dispatcher、chain、redirectAction等返回结果的区别</h2><p>&emsp;&emsp;Action处理完用户请求后，返回一个普通字符串，整个普通字符串就是一个逻辑视图名。通过配置逻辑视图名和物理视图资源之间的映射关系，系统在收到Action返回的逻辑视图名后就会把响应的物理视图资源呈现给浏览者。</p>
-<p>&emsp;&emsp;对于返回结果，需要在struts.xml的<result ...="">元素中配置。result元素有两个任务：</result></p>
-<ul>
-<li>提供一个逻辑名，一个action返回类似”success”或”error”，而任何其他细节信息并不知道</li>
-<li>提供一个result type，默认为dispatcher，另外可选的结果有redirect、redirectaction、action。<blockquote>
-<ol>
-<li>跳转方式：dispatcher和chain是服务器端跳转，所以客户端只发起一次请求，产生一个action；redirect和redirectAction是客户端跳转，所以客户端发起两次请求。</li>
-<li>跳转内容:dispatcher和redirect跳转的是views（一般是jsp页面）；chain和redirectAction跳转的是一个action。</li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left"><strong>名称</strong></th>
-<th style="text-align:left"><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">dispatcher</td>
-<td style="text-align:left">将请求forward（转发）到指定JSP</td>
-</tr>
-<tr>
-<td style="text-align:left">chain</td>
-<td style="text-align:left">处理Action链</td>
-</tr>
-<tr>
-<td style="text-align:left">redirect</td>
-<td style="text-align:left">重定向至一个URL</td>
-</tr>
-<tr>
-<td style="text-align:left">redirectaction</td>
-<td style="text-align:left">重定向至一个Action</td>
-</tr>
-<tr>
-<td style="text-align:left">freeMarker</td>
-<td style="text-align:left">处理freeMarker模板</td>
-</tr>
-<tr>
-<td style="text-align:left">httpHeader</td>
-<td style="text-align:left">控制特殊的Http行为</td>
-</tr>
-<tr>
-<td style="text-align:left">steam</td>
-<td style="text-align:left">向浏览器发送InputStream对象，用来处理文件下载</td>
-</tr>
-<tr>
-<td style="text-align:left">velocity</td>
-<td style="text-align:left">处理Velocity模板</td>
-</tr>
-<tr>
-<td style="text-align:left">xslt</td>
-<td style="text-align:left">处理XML/XLST模板</td>
-</tr>
-<tr>
-<td style="text-align:left">plaintext</td>
-<td style="text-align:left">显示原始文件内容</td>
-</tr>
-<tr>
-<td style="text-align:left">tiles</td>
-<td style="text-align:left">结合Tile使用</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p><a href="https://blog.csdn.net/sosous/article/details/40950203" target="_blank" rel="noopener">https://blog.csdn.net/sosous/article/details/40950203</a></p>
+        <p>抓紧时间，把内功提升上去<br>空有招式是不行的<br>养成好的习惯</p>
 
       
     </div>
@@ -351,13 +307,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/09/06/strutsdispacther/"></a></p>
+        <p><span>本文标题:</span><a href="/2018/09/06/好好学习/">真的要好好学习</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Rena</a></p>
-        <p><span>发布时间:</span>2018-09-06, 12:35:40</p>
-        <p><span>最后更新:</span>2018-09-06, 11:39:27</p>
+        <p><span>发布时间:</span>2018-09-06, 22:23:14</p>
+        <p><span>最后更新:</span>2018-09-06, 22:23:15</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/09/06/strutsdispacther/" title="">http://yoursite.com/2018/09/06/strutsdispacther/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/06/strutsdispacther/　　作者: Rena" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/06/好好学习/" title="真的要好好学习">http://yoursite.com/2018/09/06/好好学习/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/06/好好学习/　　作者: Rena" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -369,12 +325,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
+        
+            <div id="article-nav-older" class="article-nav-title">
                 <a href="/2018/09/06/hello/">
                     
                 </a>
             </div>
-        
         
     </nav>
 
@@ -384,7 +340,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Struts2中dispatcher、chain、redirectAction等返回结果的区别"><span class="toc-number">1.</span> <span class="toc-text">Struts2中dispatcher、chain、redirectAction等返回结果的区别</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -420,7 +376,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| Rena　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"真的要好好学习　| Rena　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -440,15 +396,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/09/06/hello/" title="上一篇: ">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/09/06/hello/" title="下一篇: ">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
