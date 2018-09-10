@@ -6,4 +6,10 @@ node_modules/
 public/
 .deploy*/
 .idea/
+2018/
+archives/
+img/
+public/
+scaffolds/
+tags/
 
