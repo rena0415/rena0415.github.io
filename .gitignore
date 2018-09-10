@@ -6,3 +6,13 @@ node_modules/
 public/
 .deploy*/
 .idea/
+2018/
+archives/
+img/
+public/
+scaffolds/
+tags/
+index.html
+db.json
+package.json
+package-lock.json
