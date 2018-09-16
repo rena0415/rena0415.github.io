@@ -1,14 +1,13 @@
 ---
-title:Java中equals和==的区别
+title: Java中equals和==的区别
 tags:
     - Java 
     - article 
 ---
-&emsp;&emsp;初学Java中equals方法和 == 的区别，以一个demo引入并分析。
-###示例
-Student类
-***
-```
+初学Java中equals方法和 == 的区别，以一个demo引入并分析。
+## 示例
+### Student类
+```java
 public class Student {
     private String name;
     private int age;
@@ -19,9 +18,10 @@ public class Student {
     }
 }
 ```
-Test.java
-***
-```
+
+### Test.java
+
+```java
 public class Test {
 
     public static void main(String[] args) {
@@ -38,29 +38,33 @@ public class Test {
     }
 }
 ```
-输出
-***
+
+### 输出
 false
 false
 false
 true
-常有答案说关系运算符== 用以比较地址是否相同，equals用来比较内容是否相同。但是对象rena和yuan的内容一致输出却为false，而str1和str2用equals方法比较结果为true？
-###一、== 比较的是什么？
-&emsp;&emsp;对于基本数据类型的变量，关系运算符== 当然是直接比较数值本身。而对于上述均为引用类型变量，存储的不是数值本身，而是关联的对象在内存中的地址，不同的对象在堆中地址不同。因此，==用来比较引用变量的地址，地址不同返回false。
-###二、equals比较的是什么？
-&emsp;&emsp;equals方法是Object基类中的方法，查看具体实现：
-![image][temp1]
-&emsp;&emsp;原来，在Object类中的equals方法依然是用来比较两个对象的引用是否相等，即是否指向同一个对象。所以对于存储地址不同的对象rena和lala，equals方法返回仍为false。
-&emsp;&emsp;那么为什么对象str1和str2用equals方法比较时结果为true呢？
-&emsp;&emsp;这是因为String类中对equals方法进行了重写，实现该方法对变量内容的比较。
 
-###三、String类中对equals方法的重写
-&emsp;&emsp;String类中对equals方法的具体实现：
+常有答案说关系运算符== 用以比较地址是否相同，equals用来比较内容是否相同。但是对象rena和yuan的内容一致输出却为false，而str1和str2用equals方法比较结果为true？
+## 一、== 比较的是什么？
+对于基本数据类型的变量，关系运算符== 当然是直接比较数值本身。而对于上述均为引用类型变量，存储的不是数值本身，而是关联的对象在内存中的地址，不同的对象在堆中地址不同。因此，==用来比较引用变量的地址，地址不同返回false。
+## 二、equals比较的是什么？
+equals方法是Object基类中的方法，查看具体实现：
+![image][temp1]
+
+原来，在Object类中的equals方法依然是用来比较两个对象的引用是否相等，即是否指向同一个对象。所以对于存储地址不同的对象rena和lala，equals方法返回仍为false。
+那么为什么对象str1和str2用equals方法比较时结果为true呢？
+这是因为String类中对equals方法进行了重写,实现该方法对变量内容的比较。
+
+## 三、String类中对equals方法的重写
+String类中对equals方法的具体实现：
 ![image][tmp2]
-&emsp;&emsp;String类对equals方法进行了重写，逐个比较字符对象中字符串是否相同。而Student类并没有对equals方法进行重写，比较对象所指的内容是否相同。
-&emsp;&emsp;接下来，参照String类，实现Student类中的equals方法对对象内容的比较。
-在Student类中加入equals方法：
-```
+
+String类对equals方法进行了重写，逐个比较字符对象中字符串是否相同。而Student类并没有对equals方法进行重写，比较对象所指的内容是否相同。
+接下来，参照String类，实现Student类中的equals方法对对象内容的比较。
+
+**在Student类中加入equals方法：**
+```java
 public class Student {
     private String name;
     private int age;
@@ -79,14 +83,14 @@ public class Student {
     }
 }
 ```
-输出
-***
+
+### 输出
 false
 true
 false
 true
 
-###四、总结
+## 四、总结
 1.对于==，如果是基本数据类型的变量，则直接比较其存储的变量的值；如果是引用类型变量，则比较所指向对象的地址。
 2.对于equals方法，不能用以基本数据类型的比较。如果没有重写，依然是比较引用类型变量的地址；可以参照String类重写equals方法，用以比较对象内容。
 

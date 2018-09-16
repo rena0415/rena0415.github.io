@@ -1,6 +1,7 @@
 ---
 title: Struts2中dispatcher、chain、redirectAction等返回结果的区别
 tags:
+	- struts
     - article 
 ---
 
