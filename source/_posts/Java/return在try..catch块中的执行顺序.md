@@ -1,8 +1,7 @@
 ---
 title: return在try...catch块中的执行顺序
 tags:
-    - Java 
-    - article 
+    - Java  
 ---
 Java中的try...catch块用以在异常发生点终止执行代码，然后进入到匹配异常的catch块。如果将finally放在try...catch块后，则无论是否有异常finally中的代码总会被执行。
 那么return在其中是怎么执行的呢？以一个demo引入。

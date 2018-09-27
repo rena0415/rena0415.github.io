@@ -2,13 +2,13 @@
 
 menu:
   主页: /
-  文章: /tags/article/
+#  文章: /tags/article/
   随笔: /tags/随笔/
 
 # SubNav
 subnav:
   github: "https://rena0415.github.io/"
-  weibo: "#"
+  #weibo: "#"
   rss: "#"
   zhihu: "#"
   #qq: "#"
@@ -18,7 +18,7 @@ subnav:
   #segmentfault: "#"
   #bilibili: "#"
   #acfun: "#"
-  #mail: "mailto:litten225@qq.com"
+  mail: "yuanna0415@126.com"
   #facebook: "#"
   #google: "#"
   #twitter: "#"

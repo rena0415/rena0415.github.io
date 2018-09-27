@@ -1,8 +1,7 @@
 ---
 title: Struts2中dispatcher、chain、redirectAction等返回结果的区别
 tags:
-	- struts
-    - article 
+    - Struts 
 ---
 
 &emsp;&emsp;Action处理完用户请求后，返回一个普通字符串，整个普通字符串就是一个逻辑视图名。通过配置逻辑视图名和物理视图资源之间的映射关系，系统在收到Action返回的逻辑视图名后就会把响应的物理视图资源呈现给浏览者。

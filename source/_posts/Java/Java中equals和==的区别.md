@@ -1,8 +1,7 @@
 ---
 title: Java中equals和==的区别
 tags:
-    - Java 
-    - article 
+    - Java  
 ---
 初学Java中equals方法和 == 的区别，以一个demo引入并分析。
 ## 示例
