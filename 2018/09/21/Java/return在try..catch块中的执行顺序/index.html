@@ -9,14 +9,14 @@
   <title>return在try...catch块中的执行顺序 | Rena</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Java中的try…catch块用以在异常发生点终止执行代码，然后进入到匹配异常的catch块。如果将finally放在try…catch块后，则无论是否有异常finally中的代码总会被执行。那么return在其中是怎么执行的呢？以一个demo引入。 示例1234567891011121314151617181920public class Demo2 &amp;#123;    public stat">
-<meta name="keywords" content="article,Java">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="return在try...catch块中的执行顺序">
 <meta property="og:url" content="http://yoursite.com/2018/09/21/Java/return在try..catch块中的执行顺序/index.html">
 <meta property="og:site_name" content="Rena">
 <meta property="og:description" content="Java中的try…catch块用以在异常发生点终止执行代码，然后进入到匹配异常的catch块。如果将finally放在try…catch块后，则无论是否有异常finally中的代码总会被执行。那么return在其中是怎么执行的呢？以一个demo引入。 示例1234567891011121314151617181920public class Demo2 &amp;#123;    public stat">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-23T05:51:12.355Z">
+<meta property="og:updated_time" content="2018-09-27T05:08:40.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="return在try...catch块中的执行顺序">
 <meta name="twitter:description" content="Java中的try…catch块用以在异常发生点终止执行代码，然后进入到匹配异常的catch块。如果将finally放在try…catch块后，则无论是否有异常finally中的代码总会被执行。那么return在其中是怎么执行的呢？以一个demo引入。 示例1234567891011121314151617181920public class Demo2 &amp;#123;    public stat">
@@ -60,8 +60,6 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/article/">文章</a></li>
-	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -86,11 +84,11 @@
 				
 					<a class="github" target="_blank" href="https://rena0415.github.io/" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="mail" target="_blank" href="/yuanna0415@126.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -120,8 +118,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -129,24 +125,22 @@
 					
 						<a class="github" target="_blank" href="https://rena0415.github.io/" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
 						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="mail" target="_blank" href="/yuanna0415@126.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/article/">文章</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -225,10 +219,6 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">article</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
@@ -298,6 +288,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/09/27/Java/876. Middle of the Linked List/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          876. Middle of the Linked List
+        
+      </div>
+    </a>
   
   
     <a href="/2018/09/16/Java/Java中equals和==的区别/" id="article-nav-older" class="article-nav-link-wrap">
@@ -437,7 +436,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -445,11 +444,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">article</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">双指针</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">单链表</a>
               </li>
             
             <div class="clearfix"></div>
