@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>929. Unique Email Addresses | Rena</title>
+  <title>Rena</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercase let">
-<meta name="keywords" content="LeetCode">
-<meta property="og:type" content="article">
-<meta property="og:title" content="929. Unique Email Addresses">
-<meta property="og:url" content="http://yoursite.com/2018/11/02/Java/929. Unique Email Addresses/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Rena">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Rena">
-<meta property="og:description" content="Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercase let">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-02T14:18:30.452Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="929. Unique Email Addresses">
-<meta name="twitter:description" content="Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercase let">
+<meta name="twitter:title" content="Rena">
   
     <link rel="alternative" href="/atom.xml" title="Rena" type="application/atom+xml">
   
@@ -155,62 +150,99 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java/929. Unique Email Addresses" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-struts2/strutsdispacther" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      929. Unique Email Addresses
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/10/struts2/strutsdispacther/">Struts2中dispatcher、chain、redirectAction等返回结果的区别</a>
     </h1>
   
 
         
-        <a href="/2018/11/02/Java/929. Unique Email Addresses/" class="archive-article-date">
-  	<time datetime="2018-11-02T14:15:38.705Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-02</time>
+        <a href="/2018/09/10/struts2/strutsdispacther/" class="archive-article-date">
+  	<time datetime="2018-09-10T14:48:06.755Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Every email consists of a local name and a domain name, separated by the @ sign.</p>
-<p>For example, in <a href="mailto:alice@leetcode.com" target="_blank" rel="noopener">alice@leetcode.com</a>, alice is the local name, and leetcode.com is the domain name.</p>
-<p>Besides lowercase letters, these emails may contain ‘.’s or ‘+’s.</p>
-<p>If you add periods (‘.’) between some characters in the local name part of an email address, mail sent there will be forwarded to the same address without dots in the local name.  For example, “<a href="mailto:alice.z@leetcode.com" target="_blank" rel="noopener">alice.z@leetcode.com</a>“ and “<a href="mailto:alicez@leetcode.com" target="_blank" rel="noopener">alicez@leetcode.com</a>“ forward to the same email address.  (Note that this rule does not apply for domain names.)</p>
-<p>If you add a plus (‘+’) in the local name, everything after the first plus sign will be ignored. This allows certain emails to be filtered, for example <a href="mailto:m.y+name@email.com" target="_blank" rel="noopener">m.y+name@email.com</a> will be forwarded to <a href="mailto:my@email.com" target="_blank" rel="noopener">my@email.com</a>.  (Again, this rule does not apply for domain names.)</p>
-<p>It is possible to use both of these rules at the same time.</p>
-<p>Given a list of emails, we send one email to each address in the list.  How many different addresses actually receive mails? </p>
-<p>Example:</p>
-<blockquote>
-<p>Input: [“<a href="mailto:test.email+alex@leetcode.com" target="_blank" rel="noopener">test.email+alex@leetcode.com</a>“,”<a href="mailto:test.e.mail+bob.cathy@leetcode.com" target="_blank" rel="noopener">test.e.mail+bob.cathy@leetcode.com</a>“,”<a href="mailto:testemail+david@lee.tcode.com" target="_blank" rel="noopener">testemail+david@lee.tcode.com</a>“]<br>Output: 2<br>Explanation: “<a href="mailto:testemail@leetcode.com" target="_blank" rel="noopener">testemail@leetcode.com</a>“ and “<a href="mailto:testemail@lee.tcode.com" target="_blank" rel="noopener">testemail@lee.tcode.com</a>“ actually receive mails</p>
+        <p>&emsp;&emsp;Action处理完用户请求后，返回一个普通字符串，整个普通字符串就是一个逻辑视图名。通过配置逻辑视图名和物理视图资源之间的映射关系，系统在收到Action返回的逻辑视图名后就会把响应的物理视图资源呈现给浏览者。</p>
+<p>&emsp;&emsp;对于返回结果，需要在struts.xml的<result ...="">元素中配置。result元素有两个任务：</result></p>
+<ul>
+<li>提供一个逻辑名，一个action返回类似”success”或”error”，而任何其他细节信息并不知道</li>
+<li>提供一个result type，默认为dispatcher，另外可选的结果有redirect、redirectaction、action。<blockquote>
+<ol>
+<li>跳转方式：dispatcher和chain是服务器端跳转，所以客户端只发起一次请求，产生一个action；redirect和redirectAction是客户端跳转，所以客户端发起两次请求。</li>
+<li>跳转内容:dispatcher和redirect跳转的是views（一般是jsp页面）；chain和redirectAction跳转的是一个action。</li>
+</ol>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numUniqueEmails</span><span class="params">(String[] emails)</span> </span>&#123;</span><br><span class="line">        Set&lt;String&gt; hashSet = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (String email : emails) &#123;</span><br><span class="line">            <span class="keyword">int</span> i =email.indexOf(<span class="string">"@"</span>);</span><br><span class="line">            String local = email.substring(<span class="number">0</span>,i);</span><br><span class="line">            String domain = email.substring(i);</span><br><span class="line">            local=local.replace(<span class="string">"."</span>,<span class="string">""</span>);</span><br><span class="line">            <span class="keyword">if</span> (local.contains(<span class="string">"+"</span>))&#123;</span><br><span class="line">                local=local.substring(<span class="number">0</span>,local.indexOf(<span class="string">"+"</span>));</span><br><span class="line">            &#125;</span><br><span class="line">            hashSet.add(local+domain);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hashSet.size();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>名称</strong></th>
+<th style="text-align:left"><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">dispatcher</td>
+<td style="text-align:left">将请求forward（转发）到指定JSP</td>
+</tr>
+<tr>
+<td style="text-align:left">chain</td>
+<td style="text-align:left">处理Action链</td>
+</tr>
+<tr>
+<td style="text-align:left">redirect</td>
+<td style="text-align:left">重定向至一个URL</td>
+</tr>
+<tr>
+<td style="text-align:left">redirectaction</td>
+<td style="text-align:left">重定向至一个Action</td>
+</tr>
+<tr>
+<td style="text-align:left">freeMarker</td>
+<td style="text-align:left">处理freeMarker模板</td>
+</tr>
+<tr>
+<td style="text-align:left">httpHeader</td>
+<td style="text-align:left">控制特殊的Http行为</td>
+</tr>
+<tr>
+<td style="text-align:left">steam</td>
+<td style="text-align:left">向浏览器发送InputStream对象，用来处理文件下载</td>
+</tr>
+<tr>
+<td style="text-align:left">velocity</td>
+<td style="text-align:left">处理Velocity模板</td>
+</tr>
+<tr>
+<td style="text-align:left">xslt</td>
+<td style="text-align:left">处理XML/XLST模板</td>
+</tr>
+<tr>
+<td style="text-align:left">plaintext</td>
+<td style="text-align:left">显示原始文件内容</td>
+</tr>
+<tr>
+<td style="text-align:left">tiles</td>
+<td style="text-align:left">结合Tile使用</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><a href="https://blog.csdn.net/sosous/article/details/40950203" target="_blank" rel="noopener">https://blog.csdn.net/sosous/article/details/40950203</a></p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -221,7 +253,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Struts</a>
         		</li>
       		
 		</ul>
@@ -230,84 +262,16 @@
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/10/struts2/strutsdispacther/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/02/Java/929. Unique Email Addresses/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/11/08/Java/18. 4Sum/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          18. 4Sum
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/11/02/Java/15. 3Sum/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">15. 3Sum</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -327,24 +291,12 @@
 
 
 
-  
-  
-  
 
   
-  <div id="SOHUCS" sid="Java/929. Unique Email Addresses" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "true",
-        conf: "true"
-    });
-</script>
-</script>
   
-
-  
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -367,8 +319,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

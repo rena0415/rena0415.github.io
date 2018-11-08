@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>929. Unique Email Addresses | Rena</title>
+  <title>18. 4Sum | Rena</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercase let">
+  <meta name="description" content="Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of tar">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="929. Unique Email Addresses">
-<meta property="og:url" content="http://yoursite.com/2018/11/02/Java/929. Unique Email Addresses/index.html">
+<meta property="og:title" content="18. 4Sum">
+<meta property="og:url" content="http://yoursite.com/2018/11/08/Java/18. 4Sum/index.html">
 <meta property="og:site_name" content="Rena">
-<meta property="og:description" content="Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercase let">
+<meta property="og:description" content="Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of tar">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-02T14:18:30.452Z">
+<meta property="og:updated_time" content="2018-11-08T13:47:15.688Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="929. Unique Email Addresses">
-<meta name="twitter:description" content="Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercase let">
+<meta name="twitter:title" content="18. 4Sum">
+<meta name="twitter:description" content="Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of tar">
   
     <link rel="alternative" href="/atom.xml" title="Rena" type="application/atom+xml">
   
@@ -155,38 +155,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java/929. Unique Email Addresses" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java/18. 4Sum" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      929. Unique Email Addresses
+      18. 4Sum
     </h1>
   
 
         
-        <a href="/2018/11/02/Java/929. Unique Email Addresses/" class="archive-article-date">
-  	<time datetime="2018-11-02T14:15:38.705Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-02</time>
+        <a href="/2018/11/08/Java/18. 4Sum/" class="archive-article-date">
+  	<time datetime="2018-11-08T13:42:36.996Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Every email consists of a local name and a domain name, separated by the @ sign.</p>
-<p>For example, in <a href="mailto:alice@leetcode.com" target="_blank" rel="noopener">alice@leetcode.com</a>, alice is the local name, and leetcode.com is the domain name.</p>
-<p>Besides lowercase letters, these emails may contain ‘.’s or ‘+’s.</p>
-<p>If you add periods (‘.’) between some characters in the local name part of an email address, mail sent there will be forwarded to the same address without dots in the local name.  For example, “<a href="mailto:alice.z@leetcode.com" target="_blank" rel="noopener">alice.z@leetcode.com</a>“ and “<a href="mailto:alicez@leetcode.com" target="_blank" rel="noopener">alicez@leetcode.com</a>“ forward to the same email address.  (Note that this rule does not apply for domain names.)</p>
-<p>If you add a plus (‘+’) in the local name, everything after the first plus sign will be ignored. This allows certain emails to be filtered, for example <a href="mailto:m.y+name@email.com" target="_blank" rel="noopener">m.y+name@email.com</a> will be forwarded to <a href="mailto:my@email.com" target="_blank" rel="noopener">my@email.com</a>.  (Again, this rule does not apply for domain names.)</p>
-<p>It is possible to use both of these rules at the same time.</p>
-<p>Given a list of emails, we send one email to each address in the list.  How many different addresses actually receive mails? </p>
+        <p>Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.</p>
+<p>Notes:<br>The solution set must not contain duplicate triplets.</p>
 <p>Example:</p>
 <blockquote>
-<p>Input: [“<a href="mailto:test.email+alex@leetcode.com" target="_blank" rel="noopener">test.email+alex@leetcode.com</a>“,”<a href="mailto:test.e.mail+bob.cathy@leetcode.com" target="_blank" rel="noopener">test.e.mail+bob.cathy@leetcode.com</a>“,”<a href="mailto:testemail+david@lee.tcode.com" target="_blank" rel="noopener">testemail+david@lee.tcode.com</a>“]<br>Output: 2<br>Explanation: “<a href="mailto:testemail@leetcode.com" target="_blank" rel="noopener">testemail@leetcode.com</a>“ and “<a href="mailto:testemail@lee.tcode.com" target="_blank" rel="noopener">testemail@lee.tcode.com</a>“ actually receive mails</p>
+<p>Given array nums = [1, 0, -1, 0, -2, 2], and target = 0.</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numUniqueEmails</span><span class="params">(String[] emails)</span> </span>&#123;</span><br><span class="line">        Set&lt;String&gt; hashSet = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (String email : emails) &#123;</span><br><span class="line">            <span class="keyword">int</span> i =email.indexOf(<span class="string">"@"</span>);</span><br><span class="line">            String local = email.substring(<span class="number">0</span>,i);</span><br><span class="line">            String domain = email.substring(i);</span><br><span class="line">            local=local.replace(<span class="string">"."</span>,<span class="string">""</span>);</span><br><span class="line">            <span class="keyword">if</span> (local.contains(<span class="string">"+"</span>))&#123;</span><br><span class="line">                local=local.substring(<span class="number">0</span>,local.indexOf(<span class="string">"+"</span>));</span><br><span class="line">            &#125;</span><br><span class="line">            hashSet.add(local+domain);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hashSet.size();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>A solution set is:<br>[<br> [-1,  0, 0, 1],<br> [-2, -1, 1, 2],<br>  [-2,  0, 0, 2]<br>]</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"> <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; fourSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        Set&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> HashSet&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length - <span class="number">3</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; nums.length - <span class="number">2</span>; j++) &#123;</span><br><span class="line">                Set&lt;Integer&gt; hashSet = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k = j + <span class="number">1</span>; k &lt; nums.length; k++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (hashSet.contains(target - nums[i] - nums[j] - nums[k])) &#123;</span><br><span class="line">                        List&lt;Integer&gt; item = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">                        item.add(nums[i]);</span><br><span class="line">                        item.add(nums[j]);</span><br><span class="line">                        item.add(target - nums[i] - nums[j] - nums[k]);</span><br><span class="line">                        item.add(nums[k]);</span><br><span class="line">                        res.add(item);</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        hashSet.add(nums[k]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;(res); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -277,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/02/Java/929. Unique Email Addresses/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/08/Java/18. 4Sum/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -291,18 +289,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/11/08/Java/18. 4Sum/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          18. 4Sum
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/11/02/Java/15. 3Sum/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">15. 3Sum</div>
+    <a href="/2018/11/02/Java/929. Unique Email Addresses/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">929. Unique Email Addresses</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -332,7 +321,7 @@
   
 
   
-  <div id="SOHUCS" sid="Java/929. Unique Email Addresses" ></div> 
+  <div id="SOHUCS" sid="Java/18. 4Sum" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
