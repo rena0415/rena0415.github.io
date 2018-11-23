@@ -152,6 +152,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Oracle/Oracle 设置ID自增长" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/23/Oracle/Oracle 设置ID自增长/">转：Oracle ID自增长的设置</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/23/Oracle/Oracle 设置ID自增长/" class="archive-article-date">
+  	<time datetime="2018-11-23T06:59:05.041Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.创建表<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tablename(</span><br><span class="line">  <span class="keyword">id</span> <span class="built_in">number</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> primary <span class="keyword">key</span>,<span class="comment">/*主键，自动增加*/</span></span><br><span class="line">  <span class="keyword">name</span> varchar2(<span class="number">20</span>)， </span><br><span class="line">  <span class="keyword">password</span> varchar2(<span class="number">20</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<p>2.创建自动增长序列<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">Sequence</span> addAuto_Sequence</span><br><span class="line"><span class="keyword">Increment</span> <span class="keyword">by</span> <span class="number">1</span>     <span class="comment">-- 每次加几个 </span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">with</span> <span class="number">1</span>       <span class="comment">-- 从1开始计数     </span></span><br><span class="line"><span class="keyword">nomaxvalue</span>         <span class="comment">-- 不设置最大值,设置最大值：maxvalue 9999  </span></span><br><span class="line"><span class="keyword">nocycle</span>            <span class="comment">-- 一直累加，不循环    </span></span><br><span class="line"><span class="keyword">cache</span> <span class="number">10</span>;  </span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<p>3.创建触发器</p>
+<pre><code class="sql"><span class="keyword">Create</span> <span class="keyword">trigger</span> addAuto <span class="keyword">before</span> 
+<span class="keyword">insert</span> <span class="keyword">on</span> tablename <span class="keyword">for</span> <span class="keyword">each</span> <span class="keyword">row</span> <span class="comment">/*对每一行都检测是否触发*/</span>
+<span class="keyword">begin</span>
+<span class="keyword">select</span> addAuto_Sequence.nextval <span class="keyword">into</span>:New.id <span class="keyword">from</span> dual;
+<span class="keyword">end</span>; 
+</code></pre>
+<p>4、提交 commit;<br>5、测试 insert into tablename values(‘rena’,’123456’);</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/23/Oracle/Oracle 设置ID自增长/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java/18. 4Sum" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -912,80 +995,6 @@
 
 
   
-    <article id="post-随笔/菜鸟上路" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/10/随笔/菜鸟上路/">借点小光环</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/10/随笔/菜鸟上路/" class="archive-article-date">
-  	<time datetime="2018-09-10T14:48:06.757Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>发现会写代码的人就像侠客<br>十八般武艺闪瞎眼<br>菜鸟上路<br>拜师学艺ing</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/10/随笔/菜鸟上路/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1091,15 +1100,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Struts</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">

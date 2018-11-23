@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Rena</title>
+  <title>Tag: Oracle | Rena</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Rena">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Oracle/index.html">
 <meta property="og:site_name" content="Rena">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -152,226 +152,58 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-随笔/菜鸟上路" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/11/23/Oracle/Oracle 设置ID自增长/" class="archive-article-date">
+  	<time datetime="2018-11-23T06:59:05.041Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-23</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/10/随笔/菜鸟上路/">借点小光环</a>
+      <a class="archive-article-title" href="/2018/11/23/Oracle/Oracle 设置ID自增长/">转：Oracle ID自增长的设置</a>
     </h1>
   
 
-        
-        <a href="/2018/09/10/随笔/菜鸟上路/" class="archive-article-date">
-  	<time datetime="2018-09-10T14:48:06.757Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>发现会写代码的人就像侠客<br>十八般武艺闪瞎眼<br>菜鸟上路<br>拜师学艺ing</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/10/随笔/菜鸟上路/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-struts2/strutsdispacther" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/10/struts2/strutsdispacther/">Struts2中dispatcher、chain、redirectAction等返回结果的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/10/struts2/strutsdispacther/" class="archive-article-date">
-  	<time datetime="2018-09-10T14:48:06.755Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&emsp;&emsp;Action处理完用户请求后，返回一个普通字符串，整个普通字符串就是一个逻辑视图名。通过配置逻辑视图名和物理视图资源之间的映射关系，系统在收到Action返回的逻辑视图名后就会把响应的物理视图资源呈现给浏览者。</p>
-<p>&emsp;&emsp;对于返回结果，需要在struts.xml的<result ...="">元素中配置。result元素有两个任务：</result></p>
-<ul>
-<li>提供一个逻辑名，一个action返回类似”success”或”error”，而任何其他细节信息并不知道</li>
-<li>提供一个result type，默认为dispatcher，另外可选的结果有redirect、redirectaction、action。<blockquote>
-<ol>
-<li>跳转方式：dispatcher和chain是服务器端跳转，所以客户端只发起一次请求，产生一个action；redirect和redirectAction是客户端跳转，所以客户端发起两次请求。</li>
-<li>跳转内容:dispatcher和redirect跳转的是views（一般是jsp页面）；chain和redirectAction跳转的是一个action。</li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left"><strong>名称</strong></th>
-<th style="text-align:left"><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">dispatcher</td>
-<td style="text-align:left">将请求forward（转发）到指定JSP</td>
-</tr>
-<tr>
-<td style="text-align:left">chain</td>
-<td style="text-align:left">处理Action链</td>
-</tr>
-<tr>
-<td style="text-align:left">redirect</td>
-<td style="text-align:left">重定向至一个URL</td>
-</tr>
-<tr>
-<td style="text-align:left">redirectaction</td>
-<td style="text-align:left">重定向至一个Action</td>
-</tr>
-<tr>
-<td style="text-align:left">freeMarker</td>
-<td style="text-align:left">处理freeMarker模板</td>
-</tr>
-<tr>
-<td style="text-align:left">httpHeader</td>
-<td style="text-align:left">控制特殊的Http行为</td>
-</tr>
-<tr>
-<td style="text-align:left">steam</td>
-<td style="text-align:left">向浏览器发送InputStream对象，用来处理文件下载</td>
-</tr>
-<tr>
-<td style="text-align:left">velocity</td>
-<td style="text-align:left">处理Velocity模板</td>
-</tr>
-<tr>
-<td style="text-align:left">xslt</td>
-<td style="text-align:left">处理XML/XLST模板</td>
-</tr>
-<tr>
-<td style="text-align:left">plaintext</td>
-<td style="text-align:left">显示原始文件内容</td>
-</tr>
-<tr>
-<td style="text-align:left">tiles</td>
-<td style="text-align:left">结合Tile使用</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p><a href="https://blog.csdn.net/sosous/article/details/40950203" target="_blank" rel="noopener">https://blog.csdn.net/sosous/article/details/40950203</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Struts</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/10/struts2/strutsdispacther/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-  
 
 
           </div>
@@ -393,10 +225,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
