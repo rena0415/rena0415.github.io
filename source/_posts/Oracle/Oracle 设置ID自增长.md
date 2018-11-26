@@ -19,7 +19,6 @@ start with 1       -- 从1开始计数
 nomaxvalue         -- 不设置最大值,设置最大值：maxvalue 9999  
 nocycle            -- 一直累加，不循环    
 cache 10;  
-)
 ```
 3.创建触发器
 ```sql
