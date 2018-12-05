@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/11 | Rena</title>
+  <title>13. Roman to Integer | Rena</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Rena">
-<meta property="og:url" content="http://yoursite.com/archives/2018/11/index.html">
+  <meta name="description" content="Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.  Symbol   &amp;emsp;  Value&amp;emsp;I     &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;         1&amp;emsp;V     &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;        5&amp;em">
+<meta name="keywords" content="LeetCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="13. Roman to Integer">
+<meta property="og:url" content="http://yoursite.com/2018/12/05/Java/13. Roman to Integer/index.html">
 <meta property="og:site_name" content="Rena">
+<meta property="og:description" content="Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.  Symbol   &amp;emsp;  Value&amp;emsp;I     &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;         1&amp;emsp;V     &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;        5&amp;em">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-05T11:12:34.922Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rena">
+<meta name="twitter:title" content="13. Roman to Integer">
+<meta name="twitter:description" content="Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.  Symbol   &amp;emsp;  Value&amp;emsp;I     &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;         1&amp;emsp;V     &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;        5&amp;em">
   
     <link rel="alternative" href="/atom.xml" title="Rena" type="application/atom+xml">
   
@@ -150,36 +155,79 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java/13. Roman to Integer" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      13. Roman to Integer
+    </h1>
+  
+
+        
+        <a href="/2018/12/05/Java/13. Roman to Integer/" class="archive-article-date">
+  	<time datetime="2018-12-05T08:17:38.768Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-05</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</p>
+<blockquote>
+<p>Symbol   &emsp;  Value<br>&emsp;I     &emsp;&emsp;&emsp;&emsp;         1<br>&emsp;V     &emsp;&emsp;&emsp;&emsp;        5<br>&emsp;X     &emsp;&emsp;&emsp;&emsp;        10<br>&emsp;L     &emsp;&emsp;&emsp;&emsp;        50<br>&emsp;C     &emsp;&emsp;&emsp;&emsp;        100<br>&emsp;D     &emsp;&emsp;&emsp;&emsp;       500<br>&emsp;M     &emsp;&emsp;&emsp;&emsp;      1000</p>
+</blockquote>
+<p>For example, two is written as II in Roman numeral, just two one’s added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.</p>
+<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:</p>
+<p>I can be placed before V (5) and X (10) to make 4 and 9.<br>X can be placed before L (50) and C (100) to make 40 and 90.<br>C can be placed before D (500) and M (1000) to make 400 and 900.</p>
+<p>Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.</p>
+<p>Example1:</p>
+<blockquote>
+<p>Input: “III”<br>Output: 3</p>
+</blockquote>
+<p>Example2:</p>
+<blockquote>
+<p>Input: “IV”<br>Output: 4</p>
+</blockquote>
+<p>Example3:</p>
+<blockquote>
+<p>Input: “IX”<br>Output: 9</p>
+</blockquote>
+<p>Example 4:</p>
+<blockquote>
+<p>Input: “LVIII”<br>Output: 58<br>Explanation: L = 50, V= 5, III = 3.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        Map&lt;Character, Integer&gt; hashMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        hashMap.put(<span class="string">'I'</span>, <span class="number">1</span>);</span><br><span class="line">        hashMap.put(<span class="string">'V'</span>, <span class="number">5</span>);</span><br><span class="line">        hashMap.put(<span class="string">'X'</span>, <span class="number">10</span>);</span><br><span class="line">        hashMap.put(<span class="string">'L'</span>, <span class="number">50</span>);</span><br><span class="line">        hashMap.put(<span class="string">'C'</span>, <span class="number">100</span>);</span><br><span class="line">        hashMap.put(<span class="string">'D'</span>, <span class="number">500</span>);</span><br><span class="line">        hashMap.put(<span class="string">'M'</span>, <span class="number">1000</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i + <span class="number">1</span> &lt; s.length()) &#123;</span><br><span class="line">                <span class="keyword">if</span> ((s.charAt(i) == <span class="string">'X'</span> || s.charAt(i) == <span class="string">'I'</span> || s.charAt(i) == <span class="string">'C'</span>) &amp;&amp; hashMap.get(s.charAt(i)) &lt; hashMap.get(s.charAt(i + <span class="number">1</span>))) &#123;</span><br><span class="line">                    res -= hashMap.get(s.charAt(i));</span><br><span class="line">                &#125; <span class="keyword">else</span> res += hashMap.get(s.charAt(i));</span><br><span class="line">            &#125; <span class="keyword">else</span> res += hashMap.get(s.charAt(i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/26/Java/7. Reverse Integer/" class="archive-article-date">
-  	<time datetime="2018-11-26T13:15:56.936Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/26/Java/7. Reverse Integer/">7. Reverse Integer</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,171 +239,116 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/05/Java/13. Roman to Integer/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/23/Oracle/Oracle 设置ID自增长/" class="archive-article-date">
-  	<time datetime="2018-11-23T06:59:05.041Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/03/Java/9. Palindrome Number/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">9. Palindrome Number</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/23/Oracle/Oracle 设置ID自增长/">转：Oracle ID自增长的设置</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/08/Java/18. 4Sum/" class="archive-article-date">
-  	<time datetime="2018-11-08T13:42:36.996Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/08/Java/18. 4Sum/">18. 4Sum</a>
-    </h1>
+  <div id="SOHUCS" sid="Java/13. Roman to Integer" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/02/Java/929. Unique Email Addresses/" class="archive-article-date">
-  	<time datetime="2018-11-02T14:15:38.705Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/02/Java/929. Unique Email Addresses/">929. Unique Email Addresses</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/02/Java/15. 3Sum/" class="archive-article-date">
-  	<time datetime="2018-11-02T09:19:27.365Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/02/Java/15. 3Sum/">15. 3Sum</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -378,8 +371,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
