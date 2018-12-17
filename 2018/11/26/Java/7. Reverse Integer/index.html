@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Rena">
 <meta property="og:description" content="Given a 32-bit signed integer, reverse digits of an integer. Example1:  Input: 123Output: 321  Example2:  Input: -123Output: -321  Example3:  Input: 120Output: 21  Note:Assume we are dealing with an e">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-26T13:25:30.994Z">
+<meta property="og:updated_time" content="2018-12-17T12:36:32.854Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="7. Reverse Integer">
 <meta name="twitter:description" content="Given a 32-bit signed integer, reverse digits of an integer. Example1:  Input: 123Output: 321  Example2:  Input: -123Output: -321  Example3:  Input: 120Output: 21  Note:Assume we are dealing with an e">
@@ -188,7 +188,7 @@
 <blockquote>
 <p>Input: 120<br>Output: 21</p>
 </blockquote>
-<p>Note:<br>Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
+<p>Note:<br>Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2^31,  2^31 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> mod = x % <span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span> (x &gt; <span class="number">0</span> &amp;&amp; (Integer.MAX_VALUE - mod) / <span class="number">10</span> &lt; res || x &lt; <span class="number">0</span> &amp;&amp; (Integer.MIN_VALUE - mod) / <span class="number">10</span> &gt; res)</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            res = res * <span class="number">10</span> + x % <span class="number">10</span>;</span><br><span class="line">            x /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
